@@ -1,0 +1,89 @@
+@font-face {
+	font-family:'BebasNeueCyrillic';
+	src: url(e:/Projects/Marvel_info/fonts/BebasNeueCyrillic.ttf);
+}
+body{
+	margin: 0 auto;
+	padding: 0;
+	font-family: BebasNeueCyrillic;
+}
+a{
+	text-decoration: none;
+}
+:root{
+	--r: 255;
+	--g: 255;
+	--b: 255;
+	--bg-color: white;
+	--shadow: black;
+	--text-color: black;
+	--text-color-films: white;
+}
+#button_back{
+	position: fixed;
+	top: 3px;
+	left: 3px;
+	width: 80px;
+	display: block;
+	padding: 7px;
+	border: 1px solid red;
+	border-radius: 5px;
+	color: red;
+	letter-spacing: 1px;
+	text-align: center;
+	background-color: rgba(var(--r), var(--g), var(--b), 0.5);
+}
+.theme-switch-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 5px;
+  top: 5px;
+}
+.theme-switch_label {
+  margin-left: 5px;
+  margin-top: 3px;
+  text-shadow: 0 0 2px black;
+  color: red;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 110%;
+}
+.theme-switch {
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  width: 56px;
+}
+.theme-switch input {
+  display: none;
+}
+.slider {
+  background-color: rgba(255, 0, 0, 0.5);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+.slider:before {
+  background-color: var(--bg-color);
+  bottom: 4px;
+  content: "";
+  height: 22px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 22px;
+}
+input:checked + .slider:before {
+          transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 30px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}

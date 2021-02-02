@@ -1,0 +1,218 @@
+@import url(main_style.css);
+@font-face {
+	font-family:'MarvelRegular-Dj83';
+	src: url(e:/Projects/Marvel_info/fonts/MarvelRegular-Dj83.ttf);
+}
+img{
+	box-shadow: 0 0 10px var(--shadow);
+}
+header{
+	width: 100%;
+	height: auto;
+	background-color: var(--bg-color);
+	background-image: url(e:/Projects/Marvel_info/img/comix-fon.jpg);
+	background-size: 100%;
+}
+#header_opacity{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding-top: 150px;
+	padding-bottom: 150px;
+	text-align: center;
+	background-color: rgba(var(--r), var(--g), var(--b), 0.5);
+}
+nav{
+	width: 100%;
+	height: auto;
+	font-weight: lighter;
+	letter-spacing: 1px;
+}
+.li-lvl-1:hover > .ul-lvl-2{
+	display: block;
+}
+.ul-lvl-2{
+	display: none;
+	margin: 0;
+	padding: 0;
+	width: 150px;
+	list-style: none;
+	position: absolute;
+}
+.ul-lvl-3{
+	display: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	list-style: none;
+	left: 150px;
+	position: absolute;
+}
+.ul-lvl-31{
+	top: 0px;
+}
+.ul-lvl-32{
+	top: 37px;
+}
+.ul-lvl-33{
+	top: 75px;
+}
+.li-lvl-2{
+	width: 100%;
+}
+.li-lvl-2:hover > .ul-lvl-3{
+	display: block;
+}
+nav a{
+	display: block;
+	width: 100%;
+	color: var(--text-color);
+	box-shadow: 0 0 5px var(--shadow);
+	background-color: var(--bg-color);
+	text-align: center;
+	transition: 0.5s background-color;
+}
+.a-lvl-1{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	font-size: 150%;
+	cursor: pointer;
+}
+.a-lvl-2{
+	padding:10px 0 10px 0;
+	cursor: pointer;
+}
+nav a:hover{
+	background-color: red;
+	transition: 0.5s background-color;
+}
+#main_bg{
+	width: 100%;
+	background-color: var(--bg-color);
+	background-image: url(e:/Projects/Marvel_info/img/Marvel_comix.jpg);
+	background-size: 100%; 
+}
+#main_opasity{
+	width: 100%;
+	padding-bottom: 70px;
+	padding-top: 70px;
+	background-color: rgba(var(--r), var(--g), var(--b), 0.5);
+}
+#main{
+	width: 90%;
+	margin-left: 5%;
+	padding:0 30px 30px 30px;
+	box-sizing: border-box;
+	box-shadow: 0 0 10px var(--shadow);
+	background-color: var(--bg-color); 
+}
+.text_head{
+	width: 100%;
+	font-size: 300%;
+	text-align: center;
+	padding-top: 100px;
+	color: var(--text-color);
+}
+.text_marvel{
+	color: red;
+	font-family: MarvelRegular-Dj83;
+	letter-spacing: 1px;
+}
+.text_studios{
+	color: var(--text-color);
+	font-weight: lighter;
+}
+.text_info{
+	font-family: Arial;
+	font-size: 110%;
+	color: var(--text-color);
+}
+.img_container{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.info_img{
+	width: 100%;
+}
+
+@media screen and (min-width:768px) {
+	#header_opacity img{
+		width: 500px;
+		box-shadow: 0 0 20px var(--shadow);
+	}
+	.ul-lvl-1{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+	}
+	.li-lvl-1{
+		width: 20%;
+	}
+	.img_container{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.img_container img{
+		width: 49.5%;
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 540px) {
+	#header_opacity img{
+		width: 500px;
+		box-shadow: 0 0 20px var(--shadow);
+	}
+	.ul-lvl-1{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+	}
+	.li-lvl-1{
+		width: 20%;
+	}
+	.img_container{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.img_container img{
+		width: 99%;
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 540px){
+	#header_opacity img{
+		width: 300px;
+		box-shadow: 0 0 20px var(--shadow);
+	}
+	.ul-lvl-1{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+	}
+	.li-lvl-1{
+		width: 100%;
+	}
+	.img_container{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.img_container img{
+		width: 99%;
+		margin-top: 10px;
+	}
+}
